@@ -1,0 +1,42 @@
+﻿CREATE TABLE `hotels` (
+  `Hid` int NOT NULL AUTO_INCREMENT,
+  `HotelDesc` varchar(500) DEFAULT NULL,
+  `Location` varchar(45) NOT NULL,
+  `Rating` int NOT NULL,
+  `ParkingAvilable` tinyint DEFAULT NULL,
+  `WifiAvilable` tinyint DEFAULT NULL,
+  `ResidenceType` tinyint DEFAULT NULL,
+  `HotelImage` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`Hid`)
+)
+
+CREATE TABLE `my_reviews` (
+  `roomNum` int NOT NULL,
+  `behavRecep` varchar(45) DEFAULT NULL,
+  `checkIn` varchar(45) DEFAULT NULL,
+  `cleanliness` varchar(45) DEFAULT NULL,
+  `houseKeeping` varchar(45) DEFAULT NULL,
+  `food` varchar(45) DEFAULT NULL,
+  `price` varchar(45) DEFAULT NULL,
+  `comment` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`roomNum`)
+)
+
+CREATE TABLE `rooms` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `status` varchar(50) NOT NULL,
+  `bed` varchar(50) NOT NULL,
+  `price` varchar(50) DEFAULT NULL,
+  `facilities` varchar(100) DEFAULT NULL,
+  `location` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `UserType` char(1) NOT NULL,
+  `mobile` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) 

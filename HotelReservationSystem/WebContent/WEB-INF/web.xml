@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>HotelReservationSystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+		<servlet-name>addHotel</servlet-name>
+		<servlet-class>n.HotelRoom.addServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addHotel</servlet-name>
+		<url-pattern>/addme</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+			<servlet-name>searchHotel</servlet-name>
+			<servlet-class>n.HotelRoom.searchServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>searchHotel</servlet-name>
+		<url-pattern>/searchme</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+			<servlet-name>changeDetails</servlet-name>
+			<servlet-class>n.HotelRoom.manageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>changeDetails</servlet-name>
+		<url-pattern>/changeme</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+			<servlet-name>deleteDetails</servlet-name>
+			<servlet-class>n.HotelRoom.deleteHotelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteDetails</servlet-name>
+		<url-pattern>/deleteme</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+			<servlet-name>loginRequest</servlet-name>
+			<servlet-class>u.Login.loginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginRequest</servlet-name>
+		<url-pattern>/logme</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+			<servlet-name>regRequest</servlet-name>
+			<servlet-class>u.Login.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>regRequest</servlet-name>
+		<url-pattern>/regme</url-pattern>
+	</servlet-mapping>
+  
+  
+  
+  <servlet>
+		<servlet-name>AddReview</servlet-name>
+		<servlet-class>customer.reviews.AddReview</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddReview</servlet-name>
+		<url-pattern>/insert2</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateServlet</servlet-name>
+		<servlet-class>customer.reviews.UpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateServlet</servlet-name>
+		<url-pattern>/update2</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteServlet</servlet-name>
+		<servlet-class>customer.reviews.DeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteServlet</servlet-name>
+		<url-pattern>/delete2</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>insertingServlet</servlet-name>
+		<servlet-class>control.RoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>insertingServlet</servlet-name>
+		<url-pattern>/insert</url-pattern>
+	</servlet-mapping>
+	
+	
+  
+  <error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error.jsp</location>
+	</error-page>
+  
+  
+  
+  
+  
+  
+  
+  
+</web-app>
